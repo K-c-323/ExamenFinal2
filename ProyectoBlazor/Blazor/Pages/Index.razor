@@ -1,0 +1,34 @@
+﻿@page "/"
+
+<AuthorizeView Roles="Administrador">
+    <Authorized Context="AuthenticationState">
+        br/>
+          <strong><em><font face=”Comic Sans MS”><center><h1 style="color:green;">Bienvenido Administrador</h1></center></font></em></strong>
+        <br/>
+          <div class="card-header"></div>
+    </Authorized>
+</AuthorizeView>
+
+<AuthorizeView Roles="Usuario">
+    <Authorized Context="AuthenticationState">
+       <br/>
+          <strong><em><font face=”Comic Sans MS”><center><h1 style="color:green;">Bienvenido Usuario</h1></center></font></em></strong>
+        <br/>
+          <div class="card-header"></div>
+    </Authorized>
+</AuthorizeView>
+
+<AuthorizeView>
+    <NotAuthorized>
+      
+          <br/>
+          <strong><em><font face=”Comic Sans MS”><center><h1 style="color:red;">Examen tercer parcial</h1></center></font></em></strong>
+          <strong><em><font face=”Comic Sans MS”><center><h1 style="color:red;">Ejercicio : CREAR UN LOGIN</h1></center></font></em></strong>
+          <strong><em><font face=”Comic Sans MS”><center><h1 style="color:red;">Alumno : Kevin Adan Caceres Velasquez</h1></center></font></em></strong>
+          <strong><em><font face=”Comic Sans MS”><center><h1 style="color:red;">Debe identificarse para poder acceder a la aplicación</h1></center></font></em></strong>
+        <br/>
+          <div class="card-header"></div>
+
+
+    </NotAuthorized> 
+</AuthorizeView>
